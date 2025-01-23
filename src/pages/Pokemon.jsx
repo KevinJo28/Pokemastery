@@ -3,11 +3,14 @@ import { useEffect, useState } from "react";
 import PokemonAbilities from "../components/PokemonAbilities";
 import PokemonMoves from "../components/PokemonMoves";
 
+import { useNavigate } from "react-router-dom";
+
 export default function Pokemon() {
   const { id } = useParams(); // Obtener ID del Pokémon desde la URL
   const [pokemon, setPokemon] = useState(null);
   const [evolutionChain, setEvolutionChain] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchPokemonDetails = async () => {
@@ -23,30 +26,29 @@ export default function Pokemon() {
         const evolutionResponse = await fetch(speciesData.evolution_chain.url);
         const evolutionData = await evolutionResponse.json();
 
-        // Procesar la cadena de evoluciones
         const chain = [];
         let queue = [evolutionData.chain]; // Usaremos una cola para procesar todas las ramas
-        
+
         while (queue.length > 0) {
           const current = queue.shift(); // Tomamos el primer nodo de la cola
-          
-          // Obtener detalles del Pokémon actual
-          const response2 = await fetch(`https://pokeapi.co/api/v2/pokemon/${current.species.name}`);
-          const data2 = await response2.json();
-        
-          // Agregar Pokémon actual a la cadena
+
+          // Extraer el ID desde species.url
+          const speciesUrl = current.species.url;
+          const id = speciesUrl.split("/").filter(Boolean).pop(); // Extraer el número al final del URL
+
           chain.push({
             name: current.species.name,
-            url: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data2.id}.png`
+            url: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`,
+            id: parseInt(id), // Opcional: Puedes almacenar el ID como número
           });
-        
+
           // Agregar todas las evoluciones a la cola
           queue = queue.concat(current.evolves_to);
         }
-        
+
         setEvolutionChain(chain);
         setLoading(false);
-        
+                
       } catch (error) {
         console.error("Error fetching Pokémon details:", error);
       }
@@ -108,18 +110,30 @@ export default function Pokemon() {
                   {evolutionChain.map((evo, index) => (
                     <>
                       <div className="pokeEvo" key={index}>
-                        <img src={evo.url} alt="a" />
-                        <li>{evo.name}</li>
+                        <div
+                          className="pokemon2"
+                          onClick={() => {
+                            navigate(`/Pokedex/Pokemon/${evo.id}`);
+                          }}
+                        >
+                          <img src={evo.url} alt={evo.name} />
+                          <div className="pokemonInfo2">
+                            <div className="nombreContenedor2">
+                              <p className="pokemonId2">#{evo.id}</p>
+                              <h2 className="pokemonNombre2">{evo.name}</h2>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </>
                   ))}
                 </ul>
               </div>
             </section>
-            
           </div>
         </div>
       </div>
     </>
   );
 }
+
