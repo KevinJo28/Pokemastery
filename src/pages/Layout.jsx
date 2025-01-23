@@ -29,9 +29,6 @@ export default function Layout() {
                 <Link to="/Comparar" className={useLocation().pathname === "/Comparar" ? "active-li child" : "no-active-li child"}>Comparar</Link>   
               </li>
               <li>
-              <Link to="/Pokemon" className={useLocation().pathname === "/Pokemon" ? "active-li child" : "no-active-li child"}>Pokemon</Link>   
-              </li>
-              <li>
               <Link to="/MiLista" className={useLocation().pathname === "/MiLista" ? "active-li child" : "no-active-li child"}>Mi Lista</Link>   
               </li>
           </div>
