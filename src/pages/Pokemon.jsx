@@ -98,6 +98,7 @@ export default function Pokemon() {
 
             <section className="sect2">
               <PokemonAbilities pokemon={pokemon} />
+              <h1>Movimientos</h1>
               <div className="Moves">
                 <PokemonMoves pokemon={pokemon} />
               </div>

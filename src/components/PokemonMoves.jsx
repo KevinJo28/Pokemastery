@@ -62,52 +62,53 @@ function PokemonMoves({ pokemon }) {
   }, [pokemon]);
 
   return (
-    <div className="containerMoves">
-      <h2>Movimientos</h2>
-      {loading ? (
-        <p>Cargando movimientos...</p>
-      ) : (
-        Object.entries(groupedMoves).map(([method, moves]) => (
-          <div key={method}>
-            <h3>
-              {method === "level-up"
-                ? "Por Nivel"
-                : method === "machine"
-                ? "Por MT/MO"
-                : method === "tutor"
-                ? "Por Tutor"
-                : method === "egg"
-                ? "Por Huevo"
-                : "Otro Método"}
-            </h3>
-            <ul>
-              {moves.map((move) => (
-                <li key={move.name} style={{ marginBottom: "10px" }}>
-                  <strong>{move.name}</strong> ({move.type.toUpperCase()})
-                  {move.levelLearnedAt > 0 && (
-                    <span> - Nivel {move.levelLearnedAt}</span>
-                  )}
-                  <p>
-                    <em>{move.description}</em>
-                  </p>
-                  <ul>
-                    <li>
-                      <strong>Poder:</strong> {move.power}
-                    </li>
-                    <li>
-                      <strong>Precisión:</strong> {move.accuracy}
-                    </li>
-                    <li>
-                      <strong>PP:</strong> {move.pp}
-                    </li>
-                  </ul>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))
-      )}
-    </div>
+    <>
+      <div className="containerMoves">
+        {loading ? (
+          <p>Cargando movimientos...</p>
+        ) : (
+          Object.entries(groupedMoves).map(([method, moves]) => (
+            <div key={method}>
+              <h2>
+                {method === "level-up"
+                  ? "Por Nivel"
+                  : method === "machine"
+                  ? "Por MT/MO"
+                  : method === "tutor"
+                  ? "Por Tutor"
+                  : method === "egg"
+                  ? "Por Huevo"
+                  : "Otro Método"}
+              </h2>
+              <ul>
+                {moves.map((move) => (
+                  <li key={move.name} style={{ marginBottom: "10px" }} className={move.type + " move"}>
+                    <strong>{move.name}</strong> <span className={move.type} >({move.type.toUpperCase()})</span>
+                    {move.levelLearnedAt > 0 && (
+                      <span> - Nivel {move.levelLearnedAt}</span>
+                    )}
+                    <p>
+                      <em>{move.description}</em>
+                    </p>
+                    <ul>
+                      <li>
+                        <strong>Poder:</strong> {move.power}
+                      </li>
+                      <li>
+                        <strong>Precisión:</strong> {move.accuracy}
+                      </li>
+                      <li>
+                        <strong>PP:</strong> {move.pp}
+                      </li>
+                    </ul>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        )}
+      </div>
+    </>
   );
 }
 

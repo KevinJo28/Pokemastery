@@ -583,6 +583,8 @@ body{
 }
 .stats h2{
     color: white;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-size: 30px;
 }
 
 .statSect{
@@ -591,40 +593,40 @@ body{
 }
 
 .stats .statName{
-    color: rgb(170, 170, 170);
+    color: rgb(255, 255, 255);
     margin-right: 200px;
    
 }
 
 .stats .hp{
-    color: rgb(170, 170, 170);
+    color: rgb(255, 255, 255);
     margin-right: 209px;
 
 }
 
 .stats .attack{
-    color: rgb(170, 170, 170);
+    color: rgb(255, 255, 255);
     margin-right: 148px;
 
 }
 .stats .defense{
-    color: rgb(170, 170, 170);
+    color: rgb(255, 255, 255);
     margin-right: 124px;
 
 }
 
 .stats .special-attack{
-    color: rgb(170, 170, 170);
+    color: rgb(252, 252, 252);
     margin-right: 34px;
 
 }
 .stats .special-defense{
-    color: rgb(170, 170, 170);
+    color: rgb(255, 255, 255);
  
 
 }
 .stats .speed{
-    color: rgb(170, 170, 170);
+    color: rgb(255, 255, 255);
     margin-right: 158px;
  
 
@@ -639,6 +641,8 @@ body{
 
 .containerSkills{
     color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-size: 24px;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -665,17 +669,39 @@ body{
     font-size: 20px;
 }
 .Moves{
-    background-color: rgba(245, 245, 245, 0.767);
+    background-color: rgb(245, 245, 245);
     width: 50%;
     margin: auto;
     position: absolute;
     left: 300px;
-    height: 500px;
+    height: 800px;
     overflow-y: auto;
     border-radius: 5px;
     top: 100px;
     left: 40%;
 
+}
+
+.Moves li{
+    list-style: none;
+    text-align: left;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 3px;
+    font-size: 20px;
+}
+
+.move li{
+    background-color: rgba(177, 177, 177, 0.541);
+}
+.Moves li strong{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white;
+}
+
+.typeMoves{
+    display: inline-block;
 }
 .sect1{
     position: relative;
@@ -691,6 +717,16 @@ body{
   
  
    
+}
+
+.sect2 h1{
+    color: white;;
+    text-align: center;
+    top: 0;
+    left: 61%;
+    position: absolute;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-size: 30px;
 }
 
 .sect3{
@@ -710,8 +746,12 @@ body{
     position: relative;
     width: 70%;
     top: 0px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-size: 25px;
 
 }
+
+
 .evolution ul{
     display: flex;
     justify-content: center;
