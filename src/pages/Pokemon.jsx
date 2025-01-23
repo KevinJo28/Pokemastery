@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import PokemonAbilities from "../components/PokemonAbilities";
 import PokemonMoves from "../components/PokemonMoves";
 
-
 export default function Pokemon() {
   const { id } = useParams(); // Obtener ID del Pokémon desde la URL
   const [pokemon, setPokemon] = useState(null);
@@ -59,54 +58,60 @@ export default function Pokemon() {
     <>
       <div className="mainPokemon">
         <div className="pokemon-details">
-          <div className="containerPoke">
-            <img
-              className="pokemonImg"
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}
-              alt={pokemon.name}
-            />
-            <h1 className="pokemonName">{pokemon.name}</h1>
-          </div>
+          <div className="content">
+            <section className="sect1">
+              <div className="containerPoke">
+                <img
+                  className="pokemonImg"
+                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}
+                  alt={pokemon.name}
+                />
+                <h1 className="pokemonName">{pokemon.name}</h1>
+              </div>
 
-          <div className="stats">
-            <h2>Puntos Base</h2>
-            <ul>
-              {pokemon.stats.map((stat) => (
-                <>
-                  <section className="statSect" key={Date.now()+1}>
-                    <li key={stat.stat.name} className={stat.stat.name}>
-                      {stat.stat.name}
-                    </li>
-                    <li className="progress">
-                      <progress value={stat.base_stat} max={255} />
-                    </li>
-                    <li>{stat.base_stat}</li>
-                  </section>
-                </>
-              ))}
-            </ul>
-          </div>
+              <div className="stats">
+                <h2>Puntos Base</h2>
+                <ul>
+                  {pokemon.stats.map((stat) => (
+                    <>
+                      <section className="statSect" key={Date.now() + 1}>
+                        <li key={stat.stat.name} className={stat.stat.name}>
+                          {stat.stat.name}
+                        </li>
+                        <li className="progress">
+                          <progress value={stat.base_stat} max={255} />
+                        </li>
+                        <li>{stat.base_stat}</li>
+                      </section>
+                    </>
+                  ))}
+                </ul>
+              </div>
+            </section>
 
-          <ul key={Date.now()}>
-            <PokemonAbilities pokemon={pokemon} />
-          </ul>
-          <div className="Moves">
-            <PokemonMoves pokemon={pokemon} />
-          </div>
+            <section className="sect2">
+              <PokemonAbilities pokemon={pokemon} />
+              <div className="Moves">
+                <PokemonMoves pokemon={pokemon} />
+              </div>
+            </section>
 
-          <div className="evolution">
-            <h2>Evoluciones</h2>
-            <ul key={Date.now()+2}>
-              {evolutionChain.map((evo, index) => (
-                <>
-                <div className="pokeEvo" key={index}>
-                <img src={evo.url} alt="a" />
-                <li>{evo.name}</li>
-                </div>
-                </>
-                
-              ))}
-            </ul>
+            <section className="sect3">
+              <div className="evolution">
+                <h2>Evoluciones</h2>
+                <ul key={Date.now() + 2}>
+                  {evolutionChain.map((evo, index) => (
+                    <>
+                      <div className="pokeEvo" key={index}>
+                        <img src={evo.url} alt="a" />
+                        <li>{evo.name}</li>
+                      </div>
+                    </>
+                  ))}
+                </ul>
+              </div>
+            </section>
+            
           </div>
         </div>
       </div>

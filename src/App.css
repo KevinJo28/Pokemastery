@@ -11,6 +11,7 @@ body{
     object-fit: cover;
     /*background-color: rgb(75, 62, 62);*/
 }
+
 .nav{
     position: relative;
     display: flex;
@@ -536,23 +537,24 @@ body{
    
 }
 .containerPoke{
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px;
-    margin-left: 10%;
+    margin: 20px;
+    margin-left: 8%;
     width: 15%;
     padding: 50px;
     background-color: rgba(255, 255, 255, 0.822);
     border-radius: 10px;
-    position: relative;
-    top: 70px;
+    position: absolute;
+    top: 0;
 }
 .stats{
     width: 60%;
-    position: relative;
-    top: -400px;
+    position: absolute;
+    top: 0;
     left: 33%;
     text-align: left;
     display: flex;
@@ -639,11 +641,12 @@ body{
     color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: absolute;
     top: -300px;
     width: 500px;
     left: 70px;
-    padding:10px ;
+    padding:10px;
+    top: 0;
   
 }
 
@@ -651,8 +654,8 @@ body{
     list-style: none;
     text-align: left;
     margin-top: 10px;
-    background-color: rgba(0, 0, 0, 0.185);
-    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.541);
+    padding: 15px;
     border-radius: 3px;
     font-size: 20px;
 }
@@ -665,23 +668,48 @@ body{
     background-color: rgba(245, 245, 245, 0.767);
     width: 50%;
     margin: auto;
-    position: relative;
-    top: -550px;
+    position: absolute;
     left: 300px;
     height: 500px;
     overflow-y: auto;
     border-radius: 5px;
+    top: 100px;
+    left: 40%;
 
 }
+.sect1{
+    position: relative;
+    width: 100%;
+    height: 500px;
+   
+ 
+}
+.sect2{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+  
+ 
+   
+}
 
-.evolution{
+.sect3{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+.evolution{
+    padding: 10px;
     color: white;
     position: relative;
-    width: 40%;
-    top: -800px;
-    justify-content: center;
+    width: 70%;
+    top: 0px;
 
 }
 .evolution ul{
@@ -714,15 +742,22 @@ body{
 .pokeEvo img{
    width: 50%;
 }
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 0;
+   
+
+}
 .mainPokemon{
     position: relative;
     padding: 0;
     display: flex;
     flex-direction: column;
-    position: relative;
     top: 50px;
     width: 99vw;
-    height: auto;
+    height: 1900px;
     background: #F00000;  
     background: -webkit-linear-gradient(to right, #ff3025, #F00000); 
     background: linear-gradient(to right, #f31307, #a30000); 
