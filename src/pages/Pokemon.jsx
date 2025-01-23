@@ -25,23 +25,28 @@ export default function Pokemon() {
 
         // Procesar la cadena de evoluciones
         const chain = [];
-        let current = evolutionData.chain;
+        let queue = [evolutionData.chain]; // Usaremos una cola para procesar todas las ramas
         
-       
-        while (current) {
-          const response2 = await fetch(`https://pokeapi.co/api/v2/pokemon/${current.species.name}`)
-          const data2 = await response2.json()
+        while (queue.length > 0) {
+          const current = queue.shift(); // Tomamos el primer nodo de la cola
           
+          // Obtener detalles del Pokémon actual
+          const response2 = await fetch(`https://pokeapi.co/api/v2/pokemon/${current.species.name}`);
+          const data2 = await response2.json();
+        
+          // Agregar Pokémon actual a la cadena
           chain.push({
             name: current.species.name,
             url: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data2.id}.png`
           });
-          current = current.evolves_to[0];
-        }
-        setEvolutionChain(chain);
         
-
+          // Agregar todas las evoluciones a la cola
+          queue = queue.concat(current.evolves_to);
+        }
+        
+        setEvolutionChain(chain);
         setLoading(false);
+        
       } catch (error) {
         console.error("Error fetching Pokémon details:", error);
       }
