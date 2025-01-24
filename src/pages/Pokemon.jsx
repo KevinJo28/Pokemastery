@@ -77,7 +77,7 @@ export default function Pokemon() {
               </div>
 
               <div className="stats">
-                <h2>Puntos Base</h2>
+                <h2>Base Poinst</h2>
                 <ul>
                   {pokemon.stats.map((stat) => (
                     <>
@@ -98,7 +98,7 @@ export default function Pokemon() {
 
             <section className="sect2">
               <PokemonAbilities pokemon={pokemon} />
-              <h1>Movimientos</h1>
+              <h1>Movements</h1>
               <div className="Moves">
                 <PokemonMoves pokemon={pokemon} />
               </div>
@@ -106,7 +106,7 @@ export default function Pokemon() {
 
             <section className="sect3">
               <div className="evolution">
-                <h2>Evoluciones</h2>
+                <h2>Evolutions</h2>
                 <ul key={Date.now() + 2}>
                   {evolutionChain.map((evo, index) => (
                     <>

@@ -36,13 +36,13 @@ function PokemonAbilities({ pokemon }) {
   // Renderizar habilidades
   return (
     <div className="containerSkills">
-      <h2>Habilidades</h2>
+      <h2>Skills</h2>
       <ul>
         {abilities.length > 0 ? (
           abilities.map((ability) => (
             <li key={ability.name}>
               <strong className="NameSkill">{ability.name}</strong>{" "}
-              {ability.isHidden && <span>(Oculta)</span>}: {ability.effect}
+              {ability.isHidden && <span>(Hidden)</span>}: {ability.effect}
             </li>
           ))
         ) : (

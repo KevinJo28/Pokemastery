@@ -33,7 +33,7 @@ function PokemonMoves({ pokemon }) {
 
             const descriptionEntry =
               moveData.flavor_text_entries.find(
-                (entry) => entry.language.name === "es"
+                (entry) => entry.language.name === "en"
               ) || moveData.flavor_text_entries[0];
 
             movesByMethod[method].push({
@@ -81,7 +81,13 @@ function PokemonMoves({ pokemon }) {
         move.accuracy >= accuracyRange[0] &&
         move.accuracy <= accuracyRange[1];
       return matchesType && matchesMethod && matchesPower && matchesAccuracy;
+    }).sort((a, b) => {
+      const levelA = a.levelLearnedAt || Infinity; // Coloca sin nivel al final
+      const levelB = b.levelLearnedAt || Infinity; // Coloca sin nivel al final
+      return levelA - levelB; // Ordena por nivel ascendente
     });
+
+
     setFilteredMoves(filtered);
   }, [typeFilter, methodFilter, powerRange, accuracyRange, groupedMoves]);
 
@@ -98,7 +104,7 @@ function PokemonMoves({ pokemon }) {
           <>
             {/* Filtros */}
             <div>
-              <h3>Filtros</h3>
+              <h3>Filters</h3>
               {/* Filtro por tipo */}
               <div >
                 <div className={(typeFilter === "" ? "element" : null) + " allBack"} onClick={() => setTypeFilter("")}></div>
@@ -204,14 +210,14 @@ function PokemonMoves({ pokemon }) {
                 <div key={method}>
                   <h2>
                     {method === "level-up"
-                      ? "Por Nivel"
+                      ? "By Level"
                       : method === "machine"
-                      ? "Por MT/MO"
+                      ? "By MT/MO"
                       : method === "tutor"
-                      ? "Por Tutor"
+                      ? "By Tutor"
                       : method === "egg"
-                      ? "Por Huevo"
-                      : "Otro Método"}
+                      ? "By Egg"
+                      : "Other Methods"}
                   </h2>
                   <ul>
                     {moves.map((move) => (
@@ -225,20 +231,20 @@ function PokemonMoves({ pokemon }) {
                           ({move.type.toUpperCase()})
                         </span>
                         {move.levelLearnedAt > 0 && (
-                          <span> - Nivel {move.levelLearnedAt}</span>
+                          <span> - Level {move.levelLearnedAt}</span>
                         )}
                         <p>
                           <em>{move.description}</em>
                         </p>
                         <ul>
                           <li>
-                            <strong>Poder:</strong>{" "}
+                            <strong>Power:</strong>{" "}
                             {move.power !== null && move.power !== "N/A"
                               ? move.power
-                              : "Sin Poder"}
+                              : "No power"}
                           </li>
                           <li>
-                            <strong>Precisión:</strong>{" "}
+                            <strong>Precision:</strong>{" "}
                             {move.accuracy !== null && move.accuracy !== "N/A"
                               ? move.accuracy
                               : "Sin Precisión"}
