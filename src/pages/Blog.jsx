@@ -20,11 +20,7 @@ export default function Blog() {
               <section><p>Titulo</p> <p>Date</p></section>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolor nemo cumque adipisci fugiat debitis quos nam numquam. Provident adipisci nesciunt dolorum eius eos. Quo minima perspiciatis quibusdam obcaecati maxime?</p>
             </div>
-            <div className="blogPost">
-              <img src="/src/images/slider1.png" alt="Image" />
-              <section><p>Titulo</p> <p>Date</p></section>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolor nemo cumque adipisci fugiat debitis quos nam numquam. Provident adipisci nesciunt dolorum eius eos. Quo minima perspiciatis quibusdam obcaecati maxime?</p>
-            </div>
+            
           </div>
       </div>
     )
