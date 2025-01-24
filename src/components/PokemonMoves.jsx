@@ -100,79 +100,96 @@ function PokemonMoves({ pokemon }) {
             <div>
               <h3>Filtros</h3>
               {/* Filtro por tipo */}
-              <div>
-                <button onClick={() => setTypeFilter("")}>Todos</button>
-                <button onClick={() => setTypeFilter("fire")}>Fuego</button>
-                <button onClick={() => setTypeFilter("water")}>Agua</button>
-                <button onClick={() => setTypeFilter("grass")}>Planta</button>
+              <div >
+                <div className={(typeFilter === "" ? "element" : null) + " allBack"} onClick={() => setTypeFilter("")}></div>
+                <div className={(typeFilter === "fire" ? "element" : null) + " fireBack"} onClick={() => setTypeFilter("fire")}></div>
+                <div className={(typeFilter === "water" ? "element" : null) + " waterBack"} onClick={() => setTypeFilter("water")}></div>
+                <div className={(typeFilter === "grass" ? "element" : null) + " grassBack"} onClick={() => setTypeFilter("grass")}></div>
+                <div className={(typeFilter === "electric" ? "element" : null) + " electricBack"} onClick={() => setTypeFilter("electric")}></div>
+                <div className={(typeFilter === "psychic" ? "element" : null) + " psychicBack"} onClick={() => setTypeFilter("psychic")}></div>
+                <div className={(typeFilter === "fighting" ? "element" : null) + " fightingBack"} onClick={() => setTypeFilter("fighting")}></div>
+                <div className={(typeFilter === "steel" ? "element" : null) + " metalBack"} onClick={() => setTypeFilter("steel")}></div>
+                <div className={(typeFilter === "dark" ? "element" : null) + " darkBack"} onClick={() => setTypeFilter("dark")}></div>
+                <div className={(typeFilter === "dragon" ? "element" : null) + " dragonBack"} onClick={() => setTypeFilter("dragon")}></div>
+                <div className={(typeFilter === "fairy" ? "element" : null) + " fairyBack"} onClick={() => setTypeFilter("fairy")}></div>
+                
                 {/* Agrega más tipos */}
               </div>
 
               {/* Filtro por método */}
-              <div>
-                <button onClick={() => setMethodFilter("")}>Todos</button>
-                <button onClick={() => setMethodFilter("level-up")}>
-                  Por Nivel
-                </button>
-                <button onClick={() => setMethodFilter("machine")}>
-                  Por MT/MO
-                </button>
-                <button onClick={() => setMethodFilter("egg")}>Por Huevo</button>
-              </div>
+              <section style={{position: "relative", display: "flex", justifyContent: "space-around", alignItems: "center", width: "100%", height: "100px"}}>
 
-              {/* Rango de Poder */}
-              <div>
-                <label>
-                  Poder mínimo:
-                  <input
-                    type="number"
-                    value={powerRange[0]}
-                    onChange={(e) =>
-                      setPowerRange([Number(e.target.value), powerRange[1]])
-                    }
-                  />
-                </label>
-                <label>
-                  Poder máximo:
-                  <input
-                    type="number"
-                    value={powerRange[1]}
-                    onChange={(e) =>
-                      setPowerRange([powerRange[0], Number(e.target.value)])
-                    }
-                  />
-                </label>
-              </div>
 
-              {/* Rango de Precisión */}
-              <div>
-                <label>
-                  Precisión mínima:
-                  <input
-                    type="number"
-                    value={accuracyRange[0]}
-                    onChange={(e) =>
-                      setAccuracyRange([
-                        Number(e.target.value),
-                        accuracyRange[1],
-                      ])
-                    }
-                  />
-                </label>
-                <label>
-                  Precisión máxima:
-                  <input
-                    type="number"
-                    value={accuracyRange[1]}
-                    onChange={(e) =>
-                      setAccuracyRange([
-                        accuracyRange[0],
-                        Number(e.target.value),
-                      ])
-                    }
-                  />
-                </label>
-              </div>
+                <div style={{ display: "inline-block", top: "0px", position: "absolute", left:"78px"}}>
+                  <div className={(methodFilter === "" ? "element" : null) + " allBack2"} onClick={() => setMethodFilter("")}> <div>All</div> </div>
+                  <div className={(methodFilter === "level-up" ? "element" : null) + " lvlBack"} onClick={() => setMethodFilter("level-up")}>
+                  <div>lvl Up</div>
+                  </div>
+                  <div className={(methodFilter === "machine" ? "element" : null) + " machineBack"} onClick={() => setMethodFilter("machine")}>.
+                  </div>
+                  <div className={(methodFilter === "egg" ? "element" : null) + " eggBack"} onClick={() => setMethodFilter("egg")}>.</div>
+                </div>
+               
+                {/* Rango de Poder */}
+                <div  style={{ display: "flex", top: "0px", position: "absolute", right:"0px", alignItems:"flex-start", flexDirection:"column-reverse"}}>
+                    <div className="ranges">
+                    <label >
+                      Poder mínimo:
+                      <input
+                        type="number"
+                        value={powerRange[0]}
+                        onChange={(e) =>
+                          setPowerRange([Number(e.target.value), powerRange[1]])
+                        }
+                      />
+                    </label>
+                    <label>
+                      Poder máximo:
+                      <input
+                        type="number"
+                        value={powerRange[1]}
+                        onChange={(e) =>
+                          setPowerRange([powerRange[0], Number(e.target.value)])
+                        }
+                      />
+                    </label>
+                  </div>
+
+                  {/* Rango de Precisión */}
+                  <div  className="ranges">
+                    <label>
+                      Precisión mínima:
+                      <input
+                        type="number"
+                        value={accuracyRange[0]}
+                        onChange={(e) =>
+                          setAccuracyRange([
+                            Number(e.target.value),
+                            accuracyRange[1],
+                          ])
+                        }
+                      />
+                    </label>
+                    <label>
+                      Precisión máxima:
+                      <input
+                        type="number"
+                        value={accuracyRange[1]}
+                        onChange={(e) =>
+                          setAccuracyRange([
+                            accuracyRange[0],
+                            Number(e.target.value),
+                          ])
+                        }
+                      />
+                    </label>
+                  </div>
+
+                </div>
+             
+              </section>
+
+              
             </div>
 
             {/* Lista de movimientos filtrados */}
