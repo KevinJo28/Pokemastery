@@ -12,6 +12,7 @@ import MiLista from './pages/MiLista'
 
 import './App.css'
 import { useState } from 'react'
+import Blog1 from './blogs/Proximos_juegos_de_Pokemon_2025'
 
 
 function App() {
@@ -31,6 +32,8 @@ function App() {
             <Route path='Comparar' element={<Comparar/>}/>
             <Route path='MiLista' element={<MiLista/>}/>
             <Route path="Pokedex/Pokemon/:id" element={<Pokemon/>}/>
+            <Route path="Blog/Proximos_juegos_de_Pokemon_2025" element={<Blog1/>}/>
+
             
           </Route>
         </Routes>
