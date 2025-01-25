@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Card from "../components/Card";
 import CardPokemon from "../components/CardPokemon";
 import Slider from "../components/Slider";
 import { useNavigate } from "react-router-dom";
