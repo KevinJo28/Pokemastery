@@ -13,6 +13,8 @@ import MiLista from './pages/MiLista'
 import './App.css'
 import { useState } from 'react'
 import Blog1 from './blogs/Proximos_juegos_de_Pokemon_2025'
+import Blog2 from './blogs/Pokemon_theories_2025'
+import Blog3 from './blogs/Top_Pokemon_Favorites_by_Region'
 
 
 function App() {
@@ -33,6 +35,9 @@ function App() {
             <Route path='MiLista' element={<MiLista/>}/>
             <Route path="Pokedex/Pokemon/:id" element={<Pokemon/>}/>
             <Route path="Blog/Proximos_juegos_de_Pokemon_2025" element={<Blog1/>}/>
+            <Route path="Blog/Pokemon_theories_2025" element={<Blog2/>}/>
+            <Route path="Blog/Top_Pokemon_Favorites_by_Region" element={<Blog3/>}/>
+
 
             
           </Route>

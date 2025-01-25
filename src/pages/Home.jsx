@@ -85,39 +85,48 @@ export default function Home() {
           <div
             className="blogPost"
             onClick={() => {
-              navigate(`/Blog/Proximos_juegos_de_Pokemon_2025`);
+              navigate(`/Blog/Pokemon_theories_2025`);
             }}
           >
-            <img src="/src/images/Blog1.webp" alt="Image" />
+            <img
+              src="/src/images/pokemon-secrets-theories-2025.webp"
+              alt="pokemon-secrets-theories-2025"
+            />
             <section>
               <p className="titulo">
-                Próximos Juegos de Pokémon en 2025: Rumores, Novedades y Más
+                Secrets and Theories Every Pokémon Fan Should Know in 2025
               </p>{" "}
-              <p className="date">24/1/2025</p>
+              <p>25/1/2025</p>
             </section>
             <p>
-              Descubre los próximos juegos de Pokémon en 2025. Rumores,
-              novedades y posibles lanzamientos que los fans de Pokémon no
-              querrán perderse. ¡Entérate de todo aquí!
+              Uncover the most exciting Pokémon secrets and theories stirring
+              fan debates in 2025. From legendary mysteries to hidden lore
+              connections, explore the captivating ideas shaping the Pokémon
+              universe this year.
             </p>
           </div>
           <div
             className="blogPost"
             onClick={() => {
-              navigate(`/Blog/Proximos_juegos_de_Pokemon_2025`);
+              navigate(`/Blog/Top_Pokemon_Favorites_by_Region`);
             }}
           >
-            <img src="/src/images/Blog1.webp" alt="Image" />
+            <img
+              src="/src/images/Top_Pokemon_Favorites_by_Region.webp"
+              alt="Image"
+            />
             <section>
               <p className="titulo">
-                Próximos Juegos de Pokémon en 2025: Rumores, Novedades y Más
+                {" "}
+                Top Pokémon Favorites by Region: Rankings, Rumors, and 2025
+                Insights
               </p>{" "}
-              <p className="date">24/1/2025</p>
+              <p>25/1/2025</p>
             </section>
             <p>
-              Descubre los próximos juegos de Pokémon en 2025. Rumores,
-              novedades y posibles lanzamientos que los fans de Pokémon no
-              querrán perderse. ¡Entérate de todo aquí!
+              Discover the top Pokémon favorites by region, from Kanto to
+              Paldea. Explore fan polls, rankings, and the latest rumors about
+              upcoming Pokémon trends in 2025.
             </p>
           </div>
         </div>

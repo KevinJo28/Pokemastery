@@ -3,6 +3,7 @@
 import styled from 'styled-components';
 
 const InputSearch = ({setInput}) => {
+  
   let inputData
   return (
     <StyledWrapper>
@@ -27,7 +28,6 @@ const InputSearch = ({setInput}) => {
     </StyledWrapper>
   );
 }
-
 const StyledWrapper = styled.div`
   .container {
     position: relative;
