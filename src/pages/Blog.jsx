@@ -5,10 +5,10 @@ export default function Blog() {
     return (
       <div className="mainBlog">
           <div className="blogContainer">
-            <div className="blogPost" onClick={()=>{navigate(`/Blog/Proximos_juegos_de_Pokemon_2025`)}}>
+            <div className="blogPost" onClick={()=>{navigate(`/Blog/Upcoming_Pokemon_Games_in_2025`)}}>
               <img src="/src/images/Blog1.webp" alt="Image" />
-              <section><p className="titulo">Próximos Juegos de Pokémon en 2025: Rumores, Novedades y Más</p> <p className="date">24/1/2025</p></section>
-              <p>Descubre los próximos juegos de Pokémon en 2025. Rumores, novedades y posibles lanzamientos que los fans de Pokémon no querrán perderse. ¡Entérate de todo aquí!</p>
+              <section><p className="titulo">Upcoming Pokémon Games in 2025: Rumors, News, and More</p> <p className="date">24/1/2025</p></section>
+              <p>Discover the upcoming Pokémon games in 2025. Rumors, news and possible releases that Pokémon fans wont want to miss. Find out everything here!</p>
             </div>
             <div className="blogPost" onClick={()=>{navigate(`/Blog/Pokemon_theories_2025`)}}>
               <img src="/src/images/pokemon-secrets-theories-2025.webp" alt="pokemon-secrets-theories-2025" />
