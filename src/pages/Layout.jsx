@@ -1,6 +1,5 @@
 
 import { Link, Outlet,useLocation } from "react-router-dom";
-import Switch from "../components/Switch";
 import { FaUserCircle } from "react-icons/fa";
 import Hamburger from "../components/Hamburger";
 import LayoutMobile from "../components/LayoutMobile";
@@ -15,7 +14,7 @@ export default function Layout() {
       <nav className="nav">
         <ul className="ul">
         <FaUserCircle className="user" />
-        <Switch className="switch"/>
+        
         <Hamburger setIsChecked={setIsChecked} isChecked={isChecked}/>
         {isChecked ? <LayoutMobile className="active"/> : null}
           <li>
@@ -32,15 +31,15 @@ export default function Layout() {
               <Link to="/MiLista" className={useLocation().pathname === "/MiLista" ? "active-li child" : "no-active-li child"}>Mi Lista</Link>   
               </li>
           </div>
-          <li>
+          <li className="blogLi">
             <Link to="/Blog" className={useLocation().pathname === "/Blog" ? "active-li" : "no-active-li"}>Blog</Link>
           </li>
           <div className="line"></div>
           <li>
-            <Link to="/Regiones" className={useLocation().pathname === "/Regiones" ? "active-li" : "no-active-li"}>Regiones</Link>
+            <Link to="/Regiones" className={useLocation().pathname === "/Regiones" ? "active-li" : "no-active-li"}>Regions</Link>
           </li>
           <li>
-            <Link to="/SimuladorDeCombate" className={useLocation().pathname === "/SimuladorDeCombate" ? "active-li" : "no-active-li"}>Simulador De Combate</Link>
+            <Link to="/SimuladorDeCombate" className={useLocation().pathname === "/SimuladorDeCombate" ? "active-li" : "no-active-li"}>Team Builder</Link>
           </li>
         </ul>
       </nav>

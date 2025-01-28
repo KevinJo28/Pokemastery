@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import CardPokemon from "../components/CardPokemon";
-import Slider from "../components/Slider";
 import { useNavigate } from "react-router-dom";
-
+import Map from "../components/InteractiveMap";
 
 export default function Home() {
   const [pokemonList, setPokemonList] = useState([]);
@@ -47,7 +46,8 @@ export default function Home() {
   return (
     <>
       <div className="mainHome">
-        <Slider />
+      
+        <Map />
         <h2 className="h2">Pokemon Destacados</h2>
         {loading ? (
           <h3>Cargando...</h3>
