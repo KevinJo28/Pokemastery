@@ -1429,46 +1429,317 @@ top: 12px;
     border-radius: 15px;
 }
 
-.regionContainer{
+.swiper-container {
+    top: 150px;
+    margin: auto;
+    height: 500px;
+    padding: 20px;
     position: relative;
-    width:100%;
-    height:500px;
-    border-radius: 15px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    gap: 10px;
-    margin-top: 200px;
+    align-items: center;
+    max-width: 72.6%;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+   
+  }
   
-    
-}
-
-.regions{
-  
-   width: 400px;
-   height: 400px;
-   text-align: center;
-   text-transform: uppercase;
-   color: rgb(255, 255, 255);
-   padding: 5px;
-    background-size: cover;
-    box-shadow: 4px 4px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
-    text-shadow: 2px 2px 8px rgb(0, 0, 0);
-    font-size: 30px;
+  .swiper-slide-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    background: #f1f1f1;
     border-radius: 10px;
-    margin-top: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 200px; 
+    height: auto;
+    
+  }
 
-}
-#kanto{
-    background-image: url(images/mapaKanto.png);
+  .swiper-slide img{
+    width: 450px;
+    height: 400px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
 
+  }
+
+
+.swiper-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#johto{
-    background-image: url(images/mapaJohto.png);
+
+#kanto:hover > .kantoInfo{
+    opacity: 1;
+    display: inline-block;
+    scale: 1.1;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
 }
-#hoenn{
-    background-image: url(images/mapaHoenn.png);
+#johto:hover > .johtoInfo{
+    opacity: 1;
+    display: inline-block;
+    scale: 1.1;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
 }
+
+#hoenn:hover > .hoennInfo{
+    opacity: 1;
+    display: inline-block;
+    scale: 1.1;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
+}
+
+#sinnoh:hover > .sinnohInfo{
+    opacity: 1;
+    display: inline-block;
+    scale: 1.1;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
+}
+
+#unova:hover > .unovaInfo{
+    opacity: 1;
+    display: inline-block;
+    scale: 1.1;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
+}
+#kalos:hover > .kalosInfo{
+    opacity: 1;
+    display: inline-block;
+    scale: 1.1;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
+}
+#alola:hover > .alolaInfo{
+    opacity: 1;
+    display: inline-block;
+    scale: 1.1;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
+}
+#galar:hover > .galarInfo{
+    opacity: 1;
+    display: inline-block;
+    scale: 1.1;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
+}
+#paldea:hover > .paldeaInfo{
+    opacity: 1;
+    display: inline-block;
+    scale: 1.1;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
+}
+.kantoInfo{
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.836);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 100;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
+}
+.johtoInfo{
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.836);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
+}
+.hoennInfo{
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.836);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
+}
+  
+.sinnohInfo{
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.836);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
+}
+  
+.unovaInfo{
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.836);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
+}
+
+.kalosInfo{
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.836);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
+}
+
+.alolaInfo{
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.836);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
+}
+  
+.galarInfo{
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.836);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
+}
+  
+.paldeaInfo{
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.836);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.411), 2px 2px 4px rgba(2, 2, 2, 0.363);
+}
+  
+  
+  
 
 @media screen and (max-width: 825px){
     .blog1 .graph2{
