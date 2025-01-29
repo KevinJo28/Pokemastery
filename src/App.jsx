@@ -16,7 +16,7 @@ import Blog1 from './blogs/Upcoming_Pokemon_Games_in_2025'
 import Blog2 from './blogs/Pokemon_theories_2025'
 import Blog3 from './blogs/Top_Pokemon_Favorites_by_Region'
 
-
+import Alola from './Regions/Alola' 
 function App() {
   const [visiblePokemons, setVisiblePokemons] = useState([]); // Pokémon visibles
   
@@ -28,8 +28,8 @@ function App() {
             <Route index element={<Home/>} />
             <Route path='Pokedex' element={<Pokedex visiblePokemons={visiblePokemons} setVisiblePokemons={setVisiblePokemons}/>}/>
             <Route path='Blog' element={<Blog/>}/>
-            <Route path='Regiones' element={<Regiones/>}/>
-            <Route path='SimuladorDeCombate' element={<SimuladorDeCombate/>}/>
+            <Route path='Regions' element={<Regiones/>}/>
+            <Route path='TeamBuilder' element={<SimuladorDeCombate/>}/>
             <Route path='Pokemon' element={<Pokemon/>}/>
             <Route path='Comparar' element={<Comparar/>}/>
             <Route path='MiLista' element={<MiLista/>}/>
@@ -37,6 +37,7 @@ function App() {
             <Route path="Blog/Upcoming_Pokemon_Games_in_2025" element={<Blog1/>}/>
             <Route path="Blog/Pokemon_theories_2025" element={<Blog2/>}/>
             <Route path="Blog/Top_Pokemon_Favorites_by_Region" element={<Blog3/>}/>
+            <Route path="Regions/Alola" element={<Alola/>}/>
 
 
             

@@ -36,10 +36,10 @@ export default function Layout() {
           </li>
           <div className="line"></div>
           <li>
-            <Link to="/Regiones" className={useLocation().pathname === "/Regiones" ? "active-li" : "no-active-li"}>Regions</Link>
+            <Link to="/Regions" className={useLocation().pathname === "/Regions" ? "active-li" : "no-active-li"}>Regions</Link>
           </li>
           <li>
-            <Link to="/SimuladorDeCombate" className={useLocation().pathname === "/SimuladorDeCombate" ? "active-li" : "no-active-li"}>Team Builder</Link>
+            <Link to="/TeamBuilder" className={useLocation().pathname === "/TeamBuilder" ? "active-li" : "no-active-li"}>Team Builder</Link>
           </li>
         </ul>
       </nav>

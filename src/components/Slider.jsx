@@ -72,7 +72,7 @@ const PokemonSlider = () => {
               Cristal. Es conocida por su tradición y conexión con la región de
               Kanto.
             </p>
-            <p>Iniciales</p>
+            <p>Starters</p>
             <p style={{fontSize:"20px"}}>Chikorita,Cyndaquil,Totodile</p>
             <img
               style={{
