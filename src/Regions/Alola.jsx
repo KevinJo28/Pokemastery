@@ -9,13 +9,7 @@ export default function Alola() {
           <section className="part2">
             <h2>History:</h2>
             <p>
-              Unova is a modern, industrialized region inspired by New York
-              City. The main antagonist, Team Plasma, led by N, seeks to
-              liberate Pokémon from human ownership, but their true goal is
-              control. The region introduces a large number of new Pokémon and
-              features the Battle Subway, a battle facility similar to the
-              Battle Tower. Notable locations include Nuvema Town and Castelia
-              City, a bustling metropolis.
+            Alola is an archipelago inspired by Hawaii, embracing a laid-back lifestyle and unique traditions. The region replaces the Pokémon League with island trials and Kahuna battles. Its also home to regional Pokémon forms and Ultra Beasts.
             </p>
             <section className="part3" style={{ display: "flex" }}>
               <div style={{ padding: "20px", paddingLeft: "0" }}>

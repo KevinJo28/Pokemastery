@@ -17,6 +17,14 @@ import Blog2 from './blogs/Pokemon_theories_2025'
 import Blog3 from './blogs/Top_Pokemon_Favorites_by_Region'
 
 import Alola from './Regions/Alola' 
+import Kanto from './Regions/Kanto'
+import Johto from './Regions/Johto' 
+import Sinnoh from './Regions/Sinnoh' 
+import Hoenn from './Regions/Hoenn'   
+import Unova from './Regions/Unova' 
+import Kalos from './Regions/Kalos' 
+import Galar from './Regions/Galar' 
+import Paldea from './Regions/Paldea' 
 function App() {
   const [visiblePokemons, setVisiblePokemons] = useState([]); // Pokémon visibles
   
@@ -38,6 +46,16 @@ function App() {
             <Route path="Blog/Pokemon_theories_2025" element={<Blog2/>}/>
             <Route path="Blog/Top_Pokemon_Favorites_by_Region" element={<Blog3/>}/>
             <Route path="Regions/Alola" element={<Alola/>}/>
+            <Route path="Regions/Kanto" element={<Kanto/>}/>
+            <Route path="Regions/Johto" element={<Johto/>}/>
+            <Route path="Regions/Hoenn" element={<Hoenn/>}/>
+            <Route path="Regions/Unova" element={<Unova/>}/>
+            <Route path="Regions/Kalos" element={<Kalos/>}/>
+            <Route path="Regions/Galar" element={<Galar/>}/>
+            <Route path="Regions/Paldea" element={<Paldea/>}/>
+            <Route path="Regions/Sinnoh" element={<Sinnoh/>}/>
+            
+
 
 
             

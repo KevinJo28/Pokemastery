@@ -1815,6 +1815,7 @@ top: 12px;
 }
 
 .part1{
+    width: 44%;
     position: relative;
     transform: translate();
     box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.418);
@@ -1843,6 +1844,13 @@ top: 12px;
     left: 0px;
 }
 
+.starters2{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    padding: 0px;
+    left: 0px;
+}
 .part4{
     position: relative; width: 50%; height: 100px;
 }
