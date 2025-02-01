@@ -1855,7 +1855,107 @@ top: 12px;
     position: relative; width: 50%; height: 100px;
 }
 
+.mainTeamBuilder{
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    top: 50px;
+    width: 99vw;
+    height: auto;
+    background: #F00000;  
+    background: -webkit-linear-gradient(to right, #ff3025, #F00000); 
+    background: linear-gradient(to right, #f31307, #a30000); 
+    border-radius: 20px;
+    box-shadow: 0px 1px 2px 7px rgb(0, 0, 0);
+    -webkit-box-shadow: 0px 1px 2px 3px rgba(0, 0, 0, 0.842);
+    -moz-box-shadow: 0px 1px 2px 7px rgb(0, 0, 0);
+    margin: auto;
+    margin-bottom: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.containerTeam{
+    margin: auto;
+    width: 66%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    column-gap: 1rem;
+    row-gap: 3rem;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding: 20px;
+
+    
+}
+.pokemonElement{
+    box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.418);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    background-color: #10a810;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    gap: 20px;
+
+}
+.pokemonElement img{
+    width: 30%;
+    filter: drop-shadow(10px 10px 5px #0a0a0a8c)
+
+}
+
+.lvl{
+    font-weight: 700;
+}
+.statsPoke{
+    text-align: left;
+    border-radius: 20px;
+    padding: 10px;
+    width: 400px;
+    height: 150px;
+    background-color: white;
+    box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.418);
+    
+}
+.hp{
+    width: 360px;
+    height: 25px;
+    box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.418);
+   
+   
+   
+}
+.name{
+    font-size: 20px;
+    font-weight: 700;
+
+}
+.hpCont{
+    font-size: 20px;
+}
 @media screen and (max-width: 825px){
+    .containerTeam{
+        margin: auto;
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        column-gap: 1rem;
+        row-gap: 3rem;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        padding: 10px;
+        background-color: #40c9ff;
+        
+    }
   
     .part3{
         flex-direction: column;

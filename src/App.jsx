@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import Pokedex from './pages/Pokedex'
 import Blog from './pages/Blog'
 import Regiones from './pages/Regiones'
-import SimuladorDeCombate from './pages/SimuladorDeCombate'
+import TeamBuilder from './pages/TeamBuilder'
 import Pokemon from './pages/Pokemon'
 import Comparar from './pages/Comparar'
 import MiLista from './pages/MiLista'
@@ -37,7 +37,7 @@ function App() {
             <Route path='Pokedex' element={<Pokedex visiblePokemons={visiblePokemons} setVisiblePokemons={setVisiblePokemons}/>}/>
             <Route path='Blog' element={<Blog/>}/>
             <Route path='Regions' element={<Regiones/>}/>
-            <Route path='TeamBuilder' element={<SimuladorDeCombate/>}/>
+            <Route path='TeamBuilder' element={<TeamBuilder/>}/>
             <Route path='Pokemon' element={<Pokemon/>}/>
             <Route path='Comparar' element={<Comparar/>}/>
             <Route path='MiLista' element={<MiLista/>}/>
